@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/home.css')}}">
+{% endblock %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    {{ include('/common/header.html.twig') }}
+
+    <div class="home-container-up">
+        <h1>Bienvenue sur Aventures Gustatives !</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur dolor nibh, id congue eros pulvinar sit amet. Duis ac lorem metus. Aenean ut urna consectetur, convallis metus ut, hendrerit urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+             Ut eget lectus eleifend nibh aliquam porta in quis risus. Donec at rhoncus risus. 
+             Sed molestie elit id commodo sagittis. Maecenas sit amet massa malesuada, sollicitudin mauris eu, aliquam nibh. Donec vitae pellentesque velit. In scelerisque efficitur faucibus. Ut elementum id diam ac sodales. Nullam diam sapien, cursus in felis et, varius feugiat nunc. In hac habitasse platea dictumst. Donec et tellus velit. 
+             Praesent sagittis vestibulum ex, eu porta metus cursus nec. Sed at mattis magna.
+        </p>
+    </div>
+
+    <div class="home-container-down">
+
+    </div>
+
+    {{ include('/common/footer.html.twig') }}
+{% endblock %}

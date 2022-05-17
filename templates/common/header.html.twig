@@ -1,0 +1,26 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/header.css')}}">
+{% endblock %}
+
+{% block body %}
+
+<div class="nav-bar">
+    <ul>
+        <li><a href="">ACCUEIL</a></li>
+        <li><a href="">RECETTES</a></li>
+        <li><a href="">A PROPOS</a></li>
+        <li><a href="">CONTACT</a></li>
+        <li><a href="">DECONNEXION</a></li>
+        <li><a href="">ADMINISTRATION</a></li>
+    </ul>
+</div>
+
+<div class="header">
+    <img src="{{asset('images/logo.png')}}" alt="">
+    <h1>AVENTURES GUSTATIVES</h1>
+
+    <hr>
+</div>
+
+   
+{% endblock %}

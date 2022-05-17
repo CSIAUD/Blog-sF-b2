@@ -17,11 +17,23 @@ module.exports = {
       backgroundImage: {
       },
       fontFamily: {
-        'oswald': ['Oswald', 'sans-serif'],
-        'playfair': ['Playfair Display', 'serif'],
-        'helvetica': ['helvetica-w01-bold', 'helvetica-w02-bold', 'helvetica-lt-w10-bold', 'sans-serif']
+        'roboto': ['Roboto', 'sans-serif'],
       },
       colors: {
+        'dark': 'rgb(47 ,46 ,46)',
+        'green': {
+          400: 'rgb(132 ,148 ,123)',
+          300: 'rgb(174 ,184 ,174)',
+          200: 'rgb(211 ,224 ,211)',
+          50: 'rgb(225 ,233 ,225)',
+        },
+        'brown': 'rgb(178 ,153 ,107)',
+        'gray': {
+          500: 'rgb(139 ,133 ,133)',
+          200: 'rgb(221 ,221 ,221)',
+          50: 'rgb(248 ,249 ,247)',
+        },
+        'white': 'rgb(255 ,255 ,255)',
       },
       spacing:{
         '1/20': "5%",
@@ -64,6 +76,9 @@ module.exports = {
         '17/20': "85%",
         '18/20': "90%",
         '19/20': "95%",
+      },
+      width: {
+        '100': '400px',
       }
     }
   },

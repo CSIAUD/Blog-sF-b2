@@ -8,12 +8,15 @@ use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Psr\Log\LoggerInterface;
 
 #[Route('/user')]
 class UserController extends AbstractController
 {
+    public function __construct(private UserPasswordHasherInterface $hasher){}
+    
     #[Route('/', name: 'app_user_index', methods: ['GET'])]
     public function index(UserRepository $userRepository): Response
     {
@@ -32,7 +35,14 @@ class UserController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $logger->info('form valid user controller');
+            $user->setPassword(
+                $this
+                ->hasher
+                ->hashPassword(
+                    $user,
+                    $user->getPassword()
+                )
+            );
             $userRepository->add($user, true);
 
             return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);

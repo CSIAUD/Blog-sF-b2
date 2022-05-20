@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+<form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    {# <label for="inputEmail">Email</label>
+    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+    <label for="inputPassword">Password</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+    <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}"
+    > #}
+
+    {#
+        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+    #}
+
+    {# <button class="btn btn-lg btn-primary" type="submit">
+        Sign in
+    </button> #}
+    
+    <div class="font-playfair flex flex-col flex-nowrap justify-around h-screen">
+        <div class="flex flex-col mx-auto w-96 p-3 nm-flat-gray-300-lg space-y-8 rounded-xl">
+            <a class="font-bold" href="{{ path('app_home') }}">Retour à l'accueil</a>
+            <h1 class="text-5xl font-oswald text-center">Se connecter</h1>
+            <div class="flex flex-col justify-around space-y-5">
+                <div class="flex flex-row flex-nowrap justify-around">
+                    <input type="text" class="nm-inset-gray-200 rounded-full py-2 px-4 w-9/20" placeholder="Username">
+                    <input type="text" class="nm-inset-gray-200 rounded-full py-2 px-4 w-9/20" placeholder="Password">
+                </div>
+                <div class="flex flex-row flex-wrap justify-around space-y-5">
+                    <button type="submit" class="nm-convex-gray-400 rounded-full py-2 px-4 w-full font-extrabold">Se connecter</button>
+                    <a class="nm-convex-gray-200 rounded-full py-2 px-4 w-full font-extrabold text-center" href="{{ path('app_register') }}">S'inscrire</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

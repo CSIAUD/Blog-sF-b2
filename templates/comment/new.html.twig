@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/createcomment.css')}}">
+{% endblock %}
+
+{% block title %}New Comment{% endblock %}
+
+{% block body %}
+
+    <div class="comment-form">
+
+        <p>Laisser un commentaire</p>
+
+       
+            {{ form_start(form) }}
+
+                <div class="comment">
+                    {{ form_widget(form.text) }}
+                </div>
+
+                {#<a href="{{ path('app_recette_detail', { 'id' : 1 }) }}" data-entity-id=1>Envoyer</a>#}
+                <button>Envoyer</button>
+               
+            
+            {#<a href="">{{ button_label|default('Envoyer') }}</a>#}
+           {{ form_end(form) }}
+
+    </div>
+
+    {#<a href="{{ path('app_comment_index') }}">back to list</a>#}
+{% endblock %}

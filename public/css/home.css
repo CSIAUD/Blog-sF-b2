@@ -21,6 +21,7 @@
 }
 
 .home-container-up p {
+    margin-top: 10px;
     line-height: 25px;
     letter-spacing: 1px;
     color: #2f2e2e;

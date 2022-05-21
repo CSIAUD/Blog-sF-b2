@@ -34,6 +34,7 @@ class PostRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+
     // get a recette by id
     public function findByIdRecette($id): ?Post
     {
@@ -43,6 +44,7 @@ class PostRepository extends ServiceEntityRepository
             ->getQuery()
             ->getOneOrNullResult();
     }
+
 
     public function add(Post $entity, bool $flush = false): void
     {

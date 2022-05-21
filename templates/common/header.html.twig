@@ -8,8 +8,8 @@
     <ul>
         <li><a href="{{ path('app_home') }}">ACCUEIL</a></li>
         <li><a href="{{ path('app_post_index') }}">RECETTES</a></li>
-        <li><a href="{{ path('app_user_index') }}">A PROPOS</a></li>
-        <li><a href="{{ path('app_home') }}">CONTACT</a></li>
+        <li><a href="{{ path('app_apropos') }}">A PROPOS</a></li>
+        <li><a href="{{ path('app_contact') }}">CONTACT</a></li>
         {% if app.user %}
         <li><a href="{{ path('app_logout') }}">DECONNEXION</a></li>
             {% if is_granted("ROLE_ADMIN") %}

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/contact.css')}}">
+{% endblock %}
+
+{% block body %}
+    {{ include('/common/header.html.twig') }}
+
+    <div class="contact-container">
+        <h1>Contact</h1>
+
+        <form>
+            <label for="">Email</label><br>
+            <input type="text"><br>
+            <label for="">Message</label><br>
+            <textarea name="" cols="30" rows="6"></textarea><br><br>
+            <input id="btn" type="submit" value="Envoyer">
+        </form> 
+
+    </div>
+
+    {{ include('/common/footer.html.twig') }}
+{% endblock %}

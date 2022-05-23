@@ -77,6 +77,21 @@
     background: #2f2e2e;
 }
 
+#leftbtn {
+    display: block;
+    width: 98%;
+    margin: auto;
+    padding: 10px 0;
+    background-color: #84947b;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+#leftbtn:hover {
+    background-color: #84947b90;
+}
+
 /****************************************************/
 .social-icons {
     display: flex;

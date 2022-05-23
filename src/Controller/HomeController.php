@@ -16,11 +16,11 @@ class HomeController extends AbstractController
     public function index(PostRepository $postRepository): Response
     {
         $posts = $postRepository->findLast(10);
-        $recentRecette = $postRepository->findLast(1);
+        $recent = $postRepository->findLast(1)[0];
 
         return $this->render('home/index.html.twig', [
             'posts' => $posts,
-            'recent' => $recentRecette
+            'recent' => $recent
         ]);
     }
 }

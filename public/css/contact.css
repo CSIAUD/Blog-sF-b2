@@ -41,8 +41,11 @@
 #btn {
     display: block;
     width: 100px;
+    margin: auto;
     padding: 6px 8px;
     background-color: #84947b;
     color: #fff;
     margin-top: -20px;
+
+    cursor: pointer;
 }

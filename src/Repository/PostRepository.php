@@ -34,7 +34,6 @@ class PostRepository extends ServiceEntityRepository
             ->getResult();
     }
 
-
     // get a recette by id
     public function findByIdRecette($id): ?Post
     {

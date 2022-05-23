@@ -125,6 +125,20 @@ VALUES
     );
 
 
+INSERT INTO user
+    (username, email, firstname, lastname, roles, sessiontoken, image_id)
+VALUES
+    (
+        'ikim',
+        'ikim@gmail.com',
+        'injin',
+        'kim',
+        'user',
+        'token',
+        9
+    );
+
+
 INSERT INTO post
     (title, createat, text, user_id, category_id, image_id)
 VALUES
@@ -142,7 +156,7 @@ INSERT INTO post
 VALUES
     (
         'Vestibulum ante ipsum primis in faucibus orci luctus',
-        '05/29/2015',
+        '05/30/2015',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur dolor nibh, id congue eros pulvinar sit amet. Duis ac lorem metus. Aenean ut urna consectetur, convallis metus ut, hendrerit urna. ',
         1,
         1,
@@ -154,7 +168,7 @@ INSERT INTO post
 VALUES
     (
         'Ut eget lectus eleifend nibh aliquam porta in quis risus',
-        '05/29/2015',
+        '05/27/2015',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur dolor nibh, id congue eros pulvinar sit amet. Duis ac lorem metus. Aenean ut urna consectetur, convallis metus ut, hendrerit urna. ',
         1,
         1,
@@ -166,7 +180,7 @@ INSERT INTO post
 VALUES
     (
         'Donec at rhoncus risus. Sed molestie elit id commodo sagittis',
-        '05/29/2015',
+        '05/26/2015',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur dolor nibh, id congue eros pulvinar sit amet. Duis ac lorem metus. Aenean ut urna consectetur, convallis metus ut, hendrerit urna. ',
         1,
         1,
@@ -178,7 +192,7 @@ INSERT INTO post
 VALUES
     (
         'Maecenas sit amet massa malesuada',
-        '05/29/2015',
+        '05/25/2015',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur dolor nibh, id congue eros pulvinar sit amet. Duis ac lorem metus. Aenean ut urna consectetur, convallis metus ut, hendrerit urna. ',
         1,
         1,
@@ -190,7 +204,7 @@ INSERT INTO post
 VALUES
     (
         'sollicitudin mauris eu, aliquam nibh',
-        '05/29/2015',
+        '05/24/2015',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur dolor nibh, id congue eros pulvinar sit amet. Duis ac lorem metus. Aenean ut urna consectetur, convallis metus ut, hendrerit urna. ',
         1,
         1,
@@ -202,7 +216,7 @@ INSERT INTO post
 VALUES
     (
         'Etiam interdum pretium sapien, eget mollis velit maximus non',
-        '05/29/2015',
+        '05/23/2015',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur dolor nibh, id congue eros pulvinar sit amet. Duis ac lorem metus. Aenean ut urna consectetur, convallis metus ut, hendrerit urna. ',
         1,
         1,
@@ -214,22 +228,11 @@ INSERT INTO post
 VALUES
     (
         'Etiam interdum pretium sapien, eget mollis velit maximus non',
-        '05/29/2015',
+        '05/22/2015',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur dolor nibh, id congue eros pulvinar sit amet. Duis ac lorem metus. Aenean ut urna consectetur, convallis metus ut, hendrerit urna. ',
         1,
         1,
         8
     );
 
-INSERT INTO user
-    (username, email, firstname, lastname, roles, sessiontoken, image_id)
-VALUES
-    (
-        'ikim',
-        'ikim@gmail.com',
-        'injin',
-        'kim',
-        'user',
-        'token',
-        9
-    );
+

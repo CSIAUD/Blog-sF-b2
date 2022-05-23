@@ -79,16 +79,17 @@
             <hr id="third">
 
             <div class="last-recette">
-
+                {% if recent %}
                 <h2>Ma derniere recette</h2>
 
                 <hr class="first">
 
-                <img id="lastrecetteimg" src="{{asset('images/pasta.jpg')}}" alt="">
+                <img id="lastrecetteimg" src="{{ asset(recent.image.src) }}" alt="">
 
-                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <p>{{recent.title}}</p>
 
-                <button>Voir la recette</button>
+                <a id="leftbtn" href="{{ path('app_recette_detail', {'id': recent.id }) }}">Voir la recette</a>
+                {% endif %}
             </div>
 
         </div>

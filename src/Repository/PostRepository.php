@@ -44,6 +44,7 @@ class PostRepository extends ServiceEntityRepository
             ->getOneOrNullResult();
     }
 
+
     public function add(Post $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);

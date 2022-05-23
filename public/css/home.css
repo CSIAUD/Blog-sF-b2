@@ -21,6 +21,7 @@
 }
 
 .home-container-up p {
+    margin-top: 10px;
     line-height: 25px;
     letter-spacing: 1px;
     color: #2f2e2e;
@@ -74,6 +75,21 @@
     border: 0;
     height: 1.2px;
     background: #2f2e2e;
+}
+
+#leftbtn {
+    display: block;
+    width: 98%;
+    margin: auto;
+    padding: 10px 0;
+    background-color: #84947b;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+#leftbtn:hover {
+    background-color: #84947b90;
 }
 
 /****************************************************/

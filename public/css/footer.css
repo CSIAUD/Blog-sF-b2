@@ -18,13 +18,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.social-icons ul {
+.social-icons-footer ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.social-icons li {
+.social-icons-footer li {
     list-style: none;
     padding-left: 8px;
     padding-right: 8px;

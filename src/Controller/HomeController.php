@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/')]
 class HomeController extends AbstractController
 {
-    #[Route('/', name: 'app_home', methods: ['GET'])]
+    #[Route('/', name: 'app_home')]
     public function index(PostRepository $postRepository): Response
     {
         $posts = $postRepository->findLast(10);

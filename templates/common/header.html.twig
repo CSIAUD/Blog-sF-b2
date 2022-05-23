@@ -4,29 +4,30 @@
 
 {% block body %}
 
-<div class="nav-bar">
-    <ul>
-        <li><a href="{{ path('app_home') }}">ACCUEIL</a></li>
-        <li><a href="{{ path('app_post_index') }}">RECETTES</a></li>
-        <li><a href="{{ path('app_user_index') }}">A PROPOS</a></li>
-        <li><a href="{{ path('app_home') }}">CONTACT</a></li>
-        {% if app.user %}
-        <li><a href="{{ path('app_logout') }}">DECONNEXION</a></li>
-            {% if is_granted("ROLE_ADMIN") %}
-            <li><a href="{{ path('app_home') }}">ADMINISTRATION</a></li>
+<header>
+    <div class="nav-bar">
+        <ul>
+            <li><a href="{{ path('app_home') }}">ACCUEIL</a></li>
+            <li><a href="{{ path('app_post_index') }}">RECETTES</a></li>
+            <li><a href="{{ path('app_user_index') }}">A PROPOS</a></li>
+            <li><a href="{{ path('app_home') }}">CONTACT</a></li>
+            {% if app.user %}
+            <li><a href="{{ path('app_logout') }}">DECONNEXION</a></li>
+                {% if is_granted("ROLE_ADMIN") %}
+                <li><a href="{{ path('app_home') }}">ADMINISTRATION</a></li>
+                {% endif %}
+            {% else %}
+            <li><a href="{{ path('app_login') }}">CONNEXION / INSCRIPTION</a></li>
             {% endif %}
-        {% else %}
-        <li><a href="{{ path('app_login') }}">CONNEXION</a></li>
-        {% endif %}
-    </ul>
-</div>
+        </ul>
+    </div>
 
-<div class="header">
-    <img src="{{asset('images/logo.png')}}" alt="">
-    <h1>AVENTURES GUSTATIVES</h1>
+    <div class="header">
+        <img src="{{asset('images/logo.png')}}" alt="">
+        <h1>AVENTURES GUSTATIVES</h1>
 
-    <hr>
-</div>
-
+        <hr>
+    </div>
+</header>
    
 {% endblock %}

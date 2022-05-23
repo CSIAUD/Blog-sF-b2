@@ -1,6 +1,7 @@
 module.exports = {
   content: [
     "./templates/**/*.{html,twig}",
+    "./templates/*.{html,twig}",
     "./public/**/*.js",
     "./src/Form/*.php"
   ],

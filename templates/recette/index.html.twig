@@ -7,7 +7,6 @@
 {% block title %}Recettes{% endblock %}
 
 {% block body %}
-    {{ include('/common/header.html.twig') }}
 
     <div class="home-container-down">
 
@@ -17,7 +16,7 @@
             <img id="recettedetailimg" src="{{ asset(post.image.src) }}" alt="">
             
             <div class="info-details">
-                <p>Maria LOPEZ</p>
+                <p>{{post.user.lastname}} {{post.user.firstname}}</p>
                 <p>{{post.createat ? post.createat|date('Y-m-d') : ''}}</p>
                 <p>Plat</p>
             </div>
@@ -41,5 +40,4 @@
         </div>
     </div>
 
-    {{ include('/common/footer.html.twig') }}
 {% endblock %}

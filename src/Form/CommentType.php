@@ -17,13 +17,10 @@ class CommentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('createat', DateType::class, [
-                'format' => 'yyyy-MM-dd HH:MM:ss',
-            ])
             ->add('text', TextType::class, [
                 'attr' => [
                     'placeholder' => 'Commentaire',
-                    'class' => 'comment'
+                    'class' => 'comment reset'
                 ],
                 'label' => false,
             ]);

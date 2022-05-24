@@ -88,3 +88,18 @@
     color: #84947b;
     font-family: 'Roboto', sans-serif;
 }
+
+/****************************************************/
+.createdcmt {
+    border: 1px solid #84947b8e;
+    margin-bottom: 5px;
+}
+
+.createdcmt p {
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 10px;
+}
+
+#whocreated {
+    color: #84947b;
+}

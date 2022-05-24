@@ -497,14 +497,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .h-max {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .min-h-screen {
@@ -610,36 +610,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
 .font-extrabold {
   font-weight: 800;
 }
 
-.uppercase {
-  text-transform: uppercase;
+.font-bold {
+  font-weight: 700;
 }
 
-.text-green-500 {
-  --tw-text-opacity: 1;
-  color: rgb(34 197 94 / var(--tw-text-opacity));
-}
-
-.text-green-300 {
-  --tw-text-opacity: 1;
-  color: rgb(174 184 174 / var(--tw-text-opacity));
-}
-
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-
-.text-green-200 {
-  --tw-text-opacity: 1;
-  color: rgb(211 224 211 / var(--tw-text-opacity));
+.font-light {
+  font-weight: 300;
 }
 
 .text-green-400 {
@@ -647,13 +627,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(132 148 123 / var(--tw-text-opacity));
 }
 
-.duration-500 {
-  transition-duration: 500ms;
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.nm-flat-gray-50 {
-  background: #F8F9F7;
-  box-shadow: 0.2em 0.2em calc(0.2em * 2) #BAC4B0, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 .nm-flat-gray-200-lg {
@@ -661,24 +641,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: 0.4em 0.4em calc(0.4em * 2) #A6A6A6, calc(0.4em * -1) calc(0.4em * -1) calc(0.4em * 2) #FFFFFF;
 }
 
-.nm-flat-gray-300-lg {
-  background: #D1D5DB;
-  box-shadow: 0.4em 0.4em calc(0.4em * 2) #959EAC, calc(0.4em * -1) calc(0.4em * -1) calc(0.4em * 2) #FFFFFF;
-}
-
 .nm-flat-green-50 {
   background: #E1E9E1;
   box-shadow: 0.2em 0.2em calc(0.2em * 2) #9FB99F, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
-}
-
-.nm-flat-green-50-lg {
-  background: #E1E9E1;
-  box-shadow: 0.4em 0.4em calc(0.4em * 2) #9FB99F, calc(0.4em * -1) calc(0.4em * -1) calc(0.4em * 2) #FFFFFF;
-}
-
-.nm-flat-green-300-lg {
-  background: #AEB8AE;
-  box-shadow: 0.4em 0.4em calc(0.4em * 2) #7E8E7E, calc(0.4em * -1) calc(0.4em * -1) calc(0.4em * 2) #D4D9D4;
 }
 
 .nm-convex-gray-200 {
@@ -686,24 +651,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: 0.2em 0.2em calc(0.2em * 2) #A6A6A6, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
 }
 
-.nm-convex-gray-400 {
-  background: linear-gradient(145deg, #AEB4BE, #818999);
-  box-shadow: 0.2em 0.2em calc(0.2em * 2) #6F7989, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #C1C5CD;
-}
-
-.nm-convex-green-50 {
-  background: linear-gradient(145deg, #FBFCFB, #B9CCB9);
-  box-shadow: 0.2em 0.2em calc(0.2em * 2) #9FB99F, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
-}
-
 .nm-convex-green-200 {
   background: linear-gradient(145deg, #EDF2ED, #ADC5AD);
   box-shadow: 0.2em 0.2em calc(0.2em * 2) #93B393, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
-}
-
-.nm-convex-green-300 {
-  background: linear-gradient(145deg, #C1C9C1, #919F91);
-  box-shadow: 0.2em 0.2em calc(0.2em * 2) #7E8E7E, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #D4D9D4;
 }
 
 .nm-convex-green-400-sm {
@@ -721,22 +671,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #BAC4B0, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
 }
 
-.nm-inset-gray-200 {
-  background: #DDDDDD;
-  box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #A6A6A6, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
-}
-
 .nm-inset-green-50 {
   background: #E1E9E1;
   box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #9FB99F, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
-}
-
-.nm-inset-green-200 {
-  background: #D3E0D3;
-  box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #93B393, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
-}
-
-.nm-inset-green-300 {
-  background: #AEB8AE;
-  box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #7E8E7E, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #D4D9D4;
 }

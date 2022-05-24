@@ -210,7 +210,6 @@ svg {
     align-items: flex-start;
     margin-top: 20px;
     margin-bottom: 40px;
-
     color: #84947b;
     font-family: 'Roboto', sans-serif;
 }
@@ -258,6 +257,14 @@ svg {
     height: 0.7px;
     background: #84947b;
     margin-bottom: 40px;
+}
+
+.iconify {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: -5px;
 }
 
 /****************************************************/

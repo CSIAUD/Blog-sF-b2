@@ -13,8 +13,11 @@
         <div class="home-right">
 
             <div class="info-details">
+                <span class="iconify" data-icon="clarity:avatar-solid"></span>
                 <p>{{postdetail.user.lastname}} {{postdetail.user.firstname}}</p>
+                <span class="iconify" data-icon="bi:dot"></span>
                 <p>{{postdetail.createat ? postdetail.createat|date('Y-m-d') : ''}}</p>
+                <span class="iconify" data-icon="bi:dot"></span>
                 <p>Plat</p>
             </div>
 
@@ -46,8 +49,6 @@
                     <div class="createdcmt">
                         <p id="whocreated">Redige par {{comment.user.username}}, le {{comment.createat ? comment.createat|date('Y-m-d H:i:s') : ''}}</p>
                         <p>{{comment.text}}</p>
-                        <a id="edit" href="">Modifier</a>
-                        <a id="delete" href="">Supprimer</a>
                     </div>
                     {% endfor %}
                 {% endif %}

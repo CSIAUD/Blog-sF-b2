@@ -25,7 +25,7 @@ class Comment
     #[ORM\JoinColumn(nullable: false)]
     private $user;
 
-    #[ORM\ManyToOne(targetEntity: Post::class, inversedBy: 'comments')]
+    #[ORM\ManyToOne(targetEntity: Post::class, inversedBy: 'comments', cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
     private $post;
 

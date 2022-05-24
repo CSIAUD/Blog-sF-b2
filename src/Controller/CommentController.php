@@ -23,7 +23,7 @@ class CommentController extends AbstractController
 
     public function __construct(Security $security)
     {
-       $this->security = $security;
+        $this->security = $security;
     }
 
     #[Route('/', name: 'app_comment_index', methods: ['GET'])]
@@ -88,10 +88,13 @@ class CommentController extends AbstractController
     #[Route('/{id}', name: 'app_comment_delete', methods: ['POST'])]
     public function delete(Request $request, Comment $comment, CommentRepository $commentRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete' . $comment->getId(), $request->request->get('_token'))) {
+        /*if ($this->isCsrfTokenValid('delete' . $comment->getId(), $request->request->get('_token'))) {
             $commentRepository->remove($comment, true);
-        }
+        }*/
 
-        return $this->redirectToRoute('app_comment_index', [], Response::HTTP_SEE_OTHER);
+        dd($comment);
+        $commentRepository->remove($comment, true);
+
+        return $this->redirectToRoute('app_recette_detail', [], Response::HTTP_SEE_OTHER);
     }
 }

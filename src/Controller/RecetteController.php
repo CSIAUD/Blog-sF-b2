@@ -4,8 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Comment;
 use App\Entity\Post;
-use App\Entity\User;
 use App\Form\CommentType;
+use App\Form\PostType;
 use App\Repository\CommentRepository;
 use App\Repository\PostRepository;
 use DateTime;
@@ -25,6 +25,26 @@ class RecetteController extends AbstractController
 
         return $this->render('recette/index.html.twig', [
             'posts' => $posts,
+        ]);
+    }
+    
+    #[Route('/new', name: 'app_recette_new', methods: ['GET', 'POST'])]
+    public function new(Request $request, PostRepository $postRepository): Response
+    {
+        $post = new Post();
+        $form = $this->createForm(PostType::class, $post);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $post->setUser($this->getUser());
+            $postRepository->add($post, true);
+
+            return $this->redirectToRoute('app_home', [], Response::HTTP_SEE_OTHER);
+        }
+
+        return $this->renderForm('post/new.html.twig', [
+            'form' => $form,
+            'formTitle' => "Création d'un nouveau post",
         ]);
     }
 

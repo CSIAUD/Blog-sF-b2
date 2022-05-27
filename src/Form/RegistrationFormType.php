@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -41,7 +42,7 @@ class RegistrationFormType extends AbstractType
                 ],
                 'label' => false,
             ])
-            ->add('email', TextType::class, [
+            ->add('email', EmailType::class, [
                 'attr' => [
                     'placeholder' => 'Email',
                     'class' => 'nm-inset-green-50 rounded-full py-2 px-4 w-19/20'

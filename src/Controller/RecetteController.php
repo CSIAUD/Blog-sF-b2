@@ -3,10 +3,12 @@
 namespace App\Controller;
 
 use App\Entity\Comment;
+use App\Entity\Image;
 use App\Entity\Post;
 use App\Form\CommentType;
 use App\Form\PostType;
 use App\Repository\CommentRepository;
+use App\Repository\ImageRepository;
 use App\Repository\PostRepository;
 use DateTime;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -14,6 +16,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 #[Route('/recettes')]
 class RecetteController extends AbstractController
@@ -29,17 +33,17 @@ class RecetteController extends AbstractController
     }
     
     #[Route('/new', name: 'app_recette_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, PostRepository $postRepository): Response
+    public function new(Request $request, PostRepository $postRepo): Response
     {
         $post = new Post();
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $post->setUser($this->getUser());
-            $postRepository->add($post, true);
+            $post->setCreateat(new DateTime());
+            $postRepo->add($post, true);
 
-            return $this->redirectToRoute('app_home', [], Response::HTTP_SEE_OTHER);
+            // return $this->redirectToRoute('app_home', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('post/new.html.twig', [

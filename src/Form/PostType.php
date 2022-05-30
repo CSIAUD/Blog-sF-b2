@@ -30,6 +30,9 @@ class PostType extends AbstractType
                 'choice_label' => 'name',
                 'choice_value' => 'id',
                 'label' => false,
+                'attr' => [
+                    'class' => 'nm-inset-gray-50 rounded-md py-2 px-4 w-64'
+                ],
             ])
             ->add('text', TextareaType::class, [
                 'attr' => [
@@ -37,9 +40,6 @@ class PostType extends AbstractType
                     'class' => 'nm-inset-gray-50 rounded-md py-2 px-4 w-full'
                 ],
                 'label' => false,
-            ])
-            ->add('image', FileType::class, [
-                'required' => false,
             ])
             ->add('save', SubmitType::class, [
                 'attr' => [

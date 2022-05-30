@@ -4,10 +4,12 @@
         {% if formTitle %}
         <h3 class="text-5xl font-roboto text-center font-light">{{formTitle}}</h3>
         {% endif %}
-        {{form_widget(form.image)}}
         {{form_widget(form.title)}}
         {{form_widget(form.text)}}
+        <div class="flex flex-row justify-between">
+        {{form_widget(form.category)}}
         {{form_widget(form.save)}}
+        </div>
     </div>
 </div>
 {{ form_end(form) }}

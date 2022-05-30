@@ -84,7 +84,9 @@
 
                 <hr class="first">
 
-                <img id="lastrecetteimg" src="{{ asset(recent.image.src) }}" alt="">
+                {% if recent.image %}
+                    <img id="lastrecetteimg" src="{{ asset(recent.image.src) }}" alt="">
+                {% endif %}
 
                 <p>{{recent.title}}</p>
 
@@ -96,8 +98,9 @@
         <div class="home-right">
         {% for post in posts %}
             <div class="w-full flex flex-col items-center mb-10 border-2 border-green-300">
-                <img id="recettedetailimg" src="{{ asset(post.image.src) }}" alt="">
-                
+                {% if post.image %}
+                    <img id="recettedetailimg" src="{{ asset(post.image.src) }}" alt="">
+                {% endif %}
                 <div class="info-details">
                     <span class="iconify" data-icon="clarity:avatar-solid"></span>
                     <p>{{post.user.firstname}} {{post.user.lastname }}</p>

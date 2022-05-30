@@ -7,6 +7,7 @@ use App\Entity\Post;
 use App\Form\CommentType;
 use App\Repository\CommentRepository;
 use App\Repository\PostRepository;
+use DateTime;
 use Doctrine\Persistence\ManagerRegistry;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -78,6 +79,7 @@ class CommentController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $comments[0]->setCreateat(new DateTime());
             $commentRepo->add($comments[0], true);
 
             // return $this->redirectToRoute('app_comment_index', [], Response::HTTP_SEE_OTHER);

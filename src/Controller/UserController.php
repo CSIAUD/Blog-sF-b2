@@ -7,6 +7,7 @@ use App\Entity\User;
 use App\Form\PostType;
 use App\Form\UserType;
 use App\Repository\CommentRepository;
+use App\Repository\ContactRepository;
 use App\Repository\PostRepository;
 use App\Repository\UserRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -39,6 +40,15 @@ class UserController extends AbstractController
     {
         return $this->render('user/recettes/adminRecettes.html.twig', [
             'adminrecettes' => $postRepository->findLast(10),
+        ]);
+    }
+
+    // display all messages by admin
+    #[Route('/admin/messages', name: 'app_admin_messages', methods: ['GET'])]
+    public function adminMessages(ContactRepository $contactRepository): Response
+    {
+        return $this->render('user/messages.html.twig', [
+            'adminmessages' => $contactRepository->findAll(),
         ]);
     }
 

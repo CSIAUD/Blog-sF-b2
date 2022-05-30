@@ -23,6 +23,9 @@ INSERT INTO `user` (`id`, `username`, `email`, `password`, `firstname`, `lastnam
 (1, 'ikim', 'ikim@gmail.com', '', 'injin', 'kim', 'user', 'token', 9, 0);
 
 
+INSERT INTO `contact` (`id`, `user_id`, `mail`, `text`, `token`, `createat`) VALUES
+(1, 'ikim@gmail.com', 'test', NULL, '2022-05-05 00:00:00');
+
 --
 -- Dumping data for table `image`
 --
@@ -66,3 +69,5 @@ INSERT INTO `post` (`id`, `title`, `createat`, `text`, `user_id`, `category_id`,
 (6, 'sollicitudin mauris eu, aliquam nibh', '2022-05-05 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur dolor nibh, id congue eros pulvinar sit amet. Duis ac lorem metus. Aenean ut urna consectetur, convallis metus ut, hendrerit urna. ', 2, 1, 6),
 (7, 'Etiam interdum pretium sapien, eget mollis velit maximus non', '2022-05-04 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur dolor nibh, id congue eros pulvinar sit amet. Duis ac lorem metus. Aenean ut urna consectetur, convallis metus ut, hendrerit urna. ', 2, 1, 7),
 (8, 'Etiam interdum pretium sapien, eget mollis velit maximus non', '2022-05-03 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur dolor nibh, id congue eros pulvinar sit amet. Duis ac lorem metus. Aenean ut urna consectetur, convallis metus ut, hendrerit urna. ', 2, 1, 8);
+
+

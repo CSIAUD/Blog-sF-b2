@@ -71,7 +71,7 @@ class RecetteController extends AbstractController
         }
 
         return $this->renderForm('recette/recettedetail.html.twig', [
-            'postdetail' => $post,
+            'post' => $post,
             'form' => $form,
             'comments' => $comments,
             'posts' => $threeRecentRecettes

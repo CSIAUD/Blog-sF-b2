@@ -22,12 +22,13 @@
             {{ form_start(form) }}
 
                 <div class="comment">
-                    {{ form_widget(form.text) }}
+                {{ form_widget(form.text) }}
                 </div>
 
-                <button>
+                {{ form_widget(form.save) }}
+                {# <button>
                     <a href="{{ path('app_recette_detail', { 'id' : postdetail.id }) }}" data-entity-id={{postdetail.id}}>Envoyer</a>
-                </button>
+                </button> #}
                
             {#<a href="">{{ button_label|default('Envoyer') }}</a>#}
            {{ form_end(form) }}

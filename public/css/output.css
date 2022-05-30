@@ -468,17 +468,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.relative {
-  position: relative;
-}
-
 .m-5 {
   margin: 1.25rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.m-1 {
+  margin: 0.25rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
 }
 
 .my-10 {
@@ -486,12 +485,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 2.5rem;
 }
 
-.mb-3 {
-  margin-bottom: 0.75rem;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .block {
@@ -500,10 +508,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .inline-block {
   display: inline-block;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
@@ -528,10 +532,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100vh;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -540,12 +540,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 100%;
 }
 
-.w-100 {
-  width: 400px;
+.w-1\/2 {
+  width: 50%;
 }
 
 .w-full {
   width: 100%;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.w-100 {
+  width: 400px;
 }
 
 .w-9\/20 {
@@ -556,40 +564,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 24rem;
 }
 
-.w-19\/20 {
-  width: 95%;
-}
-
-.w-12 {
-  width: 3rem;
-}
-
-.w-12\/20 {
-  width: 60%;
-}
-
-.w-64 {
-  width: 16rem;
-}
-
-.w-1\/2 {
-  width: 50%;
-}
-
-.w-8\/20 {
-  width: 40%;
-}
-
-.w-1\/20 {
-  width: 5%;
-}
-
 .w-5\/20 {
   width: 25%;
 }
 
-.resize {
-  resize: both;
+.w-19\/20 {
+  width: 95%;
 }
 
 .flex-row {
@@ -608,8 +588,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-wrap: nowrap;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-between {
@@ -620,16 +608,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-around;
 }
 
-.gap-y-10 {
-  row-gap: 2.5rem;
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-y-5 {
   row-gap: 1.25rem;
-}
-
-.gap-y-6 {
-  row-gap: 1.5rem;
 }
 
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
@@ -648,8 +636,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-self: flex-end;
 }
 
-.justify-self-end {
-  justify-self: end;
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .rounded-xl {
@@ -664,35 +652,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.25rem;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
-.rounded-md {
-  border-radius: 0.375rem;
+.border-2 {
+  border-width: 2px;
 }
 
 .border {
   border-width: 1px;
 }
 
-.border-2 {
+.border-\[2px\] {
   border-width: 2px;
 }
 
-.border-\[\#dddddd\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(221 221 221 / var(--tw-border-opacity));
-}
-
-.border-gray-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(221 221 221 / var(--tw-border-opacity));
-}
-
-.border-gray-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+.border-\[1px\] {
+  border-width: 1px;
 }
 
 .border-green-300 {
@@ -700,19 +673,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(174 184 174 / var(--tw-border-opacity));
 }
 
+.border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(221 221 221 / var(--tw-border-opacity));
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
 .border-green-400 {
   --tw-border-opacity: 1;
   border-color: rgb(132 148 123 / var(--tw-border-opacity));
-}
-
-.border-red-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(248 113 113 / var(--tw-border-opacity));
-}
-
-.border-red-800 {
-  --tw-border-opacity: 1;
-  border-color: rgb(153 27 27 / var(--tw-border-opacity));
 }
 
 .p-3 {
@@ -723,24 +696,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.5rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
 
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-3 {
@@ -753,13 +716,38 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1.5rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -774,22 +762,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-family: Roboto, sans-serif;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
-.font-extrabold {
-  font-weight: 800;
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .font-light {
   font-weight: 300;
+}
+
+.font-extrabold {
+  font-weight: 800;
 }
 
 .font-bold {
@@ -800,14 +788,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-transform: capitalize;
 }
 
-.text-green-400 {
-  --tw-text-opacity: 1;
-  color: rgb(132 148 123 / var(--tw-text-opacity));
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-green-400 {
+  --tw-text-opacity: 1;
+  color: rgb(132 148 123 / var(--tw-text-opacity));
 }
 
 .duration-500 {
@@ -819,24 +807,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: 0.4em 0.4em calc(0.4em * 2) #A6A6A6, calc(0.4em * -1) calc(0.4em * -1) calc(0.4em * 2) #FFFFFF;
 }
 
-.nm-flat-green-50-xs {
-  background: #E1E9E1;
-  box-shadow: 0.05em 0.05em calc(0.05em * 2) #9FB99F, calc(0.05em * -1) calc(0.05em * -1) calc(0.05em * 2) #FFFFFF;
-}
-
 .nm-flat-green-50 {
   background: #E1E9E1;
   box-shadow: 0.2em 0.2em calc(0.2em * 2) #9FB99F, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
-}
-
-.nm-flat-green-200-xs {
-  background: #D3E0D3;
-  box-shadow: 0.05em 0.05em calc(0.05em * 2) #93B393, calc(0.05em * -1) calc(0.05em * -1) calc(0.05em * 2) #FFFFFF;
-}
-
-.nm-flat-green-200 {
-  background: #D3E0D3;
-  box-shadow: 0.2em 0.2em calc(0.2em * 2) #93B393, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
 }
 
 .nm-flat-green-400-xs {
@@ -844,14 +817,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: 0.05em 0.05em calc(0.05em * 2) #63705B, calc(0.05em * -1) calc(0.05em * -1) calc(0.05em * 2) #A0AC99;
 }
 
-.nm-flat-green-400-sm {
+.nm-flat-green-400 {
   background: #84947B;
-  box-shadow: 0.1em 0.1em calc(0.1em * 2) #63705B, calc(0.1em * -1) calc(0.1em * -1) calc(0.1em * 2) #A0AC99;
-}
-
-.nm-concave-green-400-sm {
-  background: linear-gradient(145deg, #707F67, #92A08A);
-  box-shadow: 0.1em 0.1em calc(0.1em * 2) #63705B, calc(0.1em * -1) calc(0.1em * -1) calc(0.1em * 2) #A0AC99;
+  box-shadow: 0.2em 0.2em calc(0.2em * 2) #63705B, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #A0AC99;
 }
 
 .nm-convex-gray-200 {
@@ -884,67 +852,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #9FB99F, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
 }
 
-.default\:nm-inset-green-50:default {
-  background: #E1E9E1;
-  box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #9FB99F, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
-}
-
-.valid\:nm-inset-green-50:valid {
-  background: #E1E9E1;
-  box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #9FB99F, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
-}
-
-.valid\:nm-inset-green-200:valid {
-  background: #D3E0D3;
-  box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #93B393, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
-}
-
-.valid\:nm-inset-green-300:valid {
-  background: #AEB8AE;
-  box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #7E8E7E, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #D4D9D4;
-}
-
-.valid\:nm-inset-green-400:valid {
-  background: #84947B;
-  box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #63705B, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #A0AC99;
-}
-
-.valid\:nm-inset-green-500:valid {
-  background: #22C55E;
-  box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #199446, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #38DD75;
-}
-
-.invalid\:nm-inset-red-200:invalid {
-  background: #FECACA;
-  box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #FC5A5A, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
-}
-
-.invalid\:nm-inset-red-500:invalid {
-  background: #EF4444;
-  box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #C61111, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #F58B8B;
-}
-
-.invalid\:nm-inset-green-200:invalid {
-  background: #D3E0D3;
-  box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #93B393, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF;
-}
-
-.invalid\:nm-inset-green-500:invalid {
-  background: #22C55E;
-  box-shadow: inset 0.2em 0.2em calc(0.2em * 2) #199446, inset calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #38DD75;
-}
-
-.hover\:nm-flat-green-400-sm:hover {
-  background: #84947B;
-  box-shadow: 0.1em 0.1em calc(0.1em * 2) #63705B, calc(0.1em * -1) calc(0.1em * -1) calc(0.1em * 2) #A0AC99;
-}
-
 .hover\:nm-concave-green-400-sm:hover {
   background: linear-gradient(145deg, #707F67, #92A08A);
-  box-shadow: 0.1em 0.1em calc(0.1em * 2) #63705B, calc(0.1em * -1) calc(0.1em * -1) calc(0.1em * 2) #A0AC99;
-}
-
-.hover\:nm-convex-green-400-sm:hover {
-  background: linear-gradient(145deg, #92A08A, #707F67);
   box-shadow: 0.1em 0.1em calc(0.1em * 2) #63705B, calc(0.1em * -1) calc(0.1em * -1) calc(0.1em * 2) #A0AC99;
 }

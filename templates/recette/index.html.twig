@@ -16,7 +16,10 @@
         <div class="w-full flex flex-col items-center mt-10 border-2 border-gray-200">
             {% for post in posts %}
             <div class="w-1/2 flex flex-col items-center my-10 border-2 border-green-300">
-                <img id="recettedetailimg" src="{{ asset(post.image.src) }}" alt="">
+                
+                {% if post.image %}
+                    <img id="recettedetailimg" src="{{ asset(post.image.src) }}" alt="">
+                {% endif %}
                 
                 <div class="info-details">
                     <span class="iconify" data-icon="clarity:avatar-solid"></span>

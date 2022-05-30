@@ -40,8 +40,8 @@ class CommentController extends AbstractController
     #[Route('/new', name: 'app_comment_new', methods: ['POST'])]
     public function new(Request $request, CommentRepository $commentRepo, LoggerInterface $logger, Comment $comment, ManagerRegistry $doctrine): Response
     {
-        $logger->info('We are in POST comment controller');
-        $logger->info($request);
+        //$logger->info('We are in POST comment controller');
+        //$logger->info($request);
         $comment = new Comment();
         $form = $this->createForm(CommentType::class, $comment);
         $form->handleRequest($request);

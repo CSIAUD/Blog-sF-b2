@@ -28,7 +28,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.contact-container form input, .contact-container form textarea {
+.contact-container form input, #contact_text {
     display: block;
     width: 98%;
     border: 1px solid #84947b;
@@ -38,7 +38,7 @@
     resize: none;
 }*/
 
-#btn {
+#contact_save {
     display: block;
     width: 100px;
     margin: auto;

@@ -10,16 +10,21 @@
 
 
     <div class="contact-container">
-        <h1>Contact</h1>
 
+        <h1>Contact</h1>
+        {#{% if form is defined %}#}
+        {{ form_start(form) }}
+        
         <form>
             <label for="">Email</label><br>
-            <input type="text"><br>
+            {{form_widget(form.mail)}}<br>
             <label for="">Message</label><br>
-            <textarea name="" cols="30" rows="6"></textarea><br><br>
-            <input id="btn" type="submit" value="Envoyer">
+            {{form_widget(form.text)}}<br><br>
+            {{form_widget(form.save)}}<br><br>
         </form> 
 
+        {{ form_end(form) }}
+        {#{% endif %}#}
     </div>
 
 {% endblock %}
